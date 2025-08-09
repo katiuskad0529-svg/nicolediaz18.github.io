@@ -1,0 +1,60 @@
+/* Palette */
+:root{
+  --bg-dark:#10211B;      /* deep finance green */
+  --text:#EAF1ED;         /* off-white */
+  --muted:#A8B5AE;        /* soft gray-green */
+  --accent:#F2C94C;       /* gold */
+  --border:#1C2A24;
+  --shadow:0 12px 30px rgba(0,0,0,.35);
+  --radius:20px;
+}
+
+/* Hero styling */
+.hero-fin{
+  background: radial-gradient(1200px 400px at 20% 0%, #1B3B2E 0%, rgba(27,59,46,0) 60%),
+              radial-gradient(1000px 500px at 100% 20%, #1C2A24 0%, rgba(28,42,36,0) 55%),
+              var(--bg-dark);
+  color: var(--text);
+  padding: 110px 0 90px;
+}
+.hero-kicker{ color:var(--muted); text-transform:uppercase; letter-spacing:.22em; font-size:.8rem }
+.hero-fin h1{ font-weight:800; line-height:1.1; margin:.25rem 0 .75rem; }
+.hero-fin h2{ font-weight:700; font-size:clamp(16px,1.4vw,22px); }
+.text-accent{ color: var(--accent); }
+.text-muted{ color: var(--muted) !important; }
+
+/* keep hero two columns on desktop */
+.hero-fin .container{ max-width:1140px; }
+
+/* photo aligned RIGHT, fixed size, nice crop */
+.hero-photo{
+  width:min(420px, 90%);
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:20px;
+  border:2px solid var(--accent);
+  box-shadow:var(--shadow);
+}
+
+/* align columns side-by-side on lg+ screens */
+.hero-fin .row{ align-items:center; }
+
+/* Buttons */
+.btn, .btn-primary{
+  background:var(--accent);
+  border:none;
+  color:#0A0A0A !important;
+  padding:.75rem 1.2rem; border-radius:12px; font-weight:700;
+  box-shadow:var(--shadow);
+}
+.btn-outline-primary{
+  background:transparent; border:2px solid var(--accent); color:var(--accent) !important;
+}
+.btn:hover{ filter:brightness(.95) }
+
+/* Stat pills */
+.stat-pill{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:#0F1E19; border:1px solid var(--border);
+  padding:.55rem .9rem; border-radius:999px; color:var(--text);
+}
