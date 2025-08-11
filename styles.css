@@ -1,0 +1,13 @@
+/* Apply flexbox to .skills-card for equal card heights, and increase line height for list items */
+
+.skills-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* ...existing styles... */
+}
+
+li {
+    /* ...existing styles... */
+    line-height: 1.7;
+}

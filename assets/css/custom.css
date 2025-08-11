@@ -7,6 +7,10 @@
   --border:#1C2A24;
   --shadow:0 12px 30px rgba(0,0,0,.35);
   --radius:20px;
+  --beige:#F9F5EB;        /* light beige for backgrounds */
+  --skills-line:#E0E0E0;  /* light gray for lines */
+  --skills-gap:24px;      /* gap for skills grid */
+  --skills-radius:16px;   /* radius for skills cards */
 }
 
 /* Hero styling */
@@ -58,3 +62,175 @@
   background:#0F1E19; border:1px solid var(--border);
   padding:.55rem .9rem; border-radius:999px; color:var(--text);
 }
+
+/* Equal card heights for skills cards */
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  height: 100%;
+}
+
+/* More even spacing in lists */
+li {
+  line-height: 1.7;
+}
+
+.skills-list li {
+  padding: 12px 0;
+  line-height: 1.6;
+}
+
+#skills .skills-header h2 {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 6px;
+}
+
+.skills-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--primary-dark);
+}
+
+/* Flex row for skills header and subtitle alignment */
+.skills-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.skills-header-row .skills-title {
+  flex: 1 1 0;
+  text-align: left;
+}
+
+.skills-header-row .subtitle {
+  flex: 1 1 0;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .skills-header-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .skills-header-row .skills-title,
+  .skills-header-row .subtitle {
+    text-align: center;
+    width: 100%;
+  }
+}
+  .skills-header-row .skills-title,
+  .skills-header-row .subtitle {
+    text-align: center;
+    width: 100%;
+  }
+
+/* Writing section styles */
+.writing-section {
+  background: var(--beige);
+  padding: 56px 0;
+  scroll-margin-top: 72px;
+}
+
+.writing-header h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--skills-line);
+  padding-bottom: 6px;
+}
+
+.writing-header .subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.writing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--skills-gap);
+}
+
+@media (min-width: 768px) {
+  .writing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.writing-card {
+  background: #fff;
+  border: 1px solid var(--skills-line);
+  border-radius: var(--skills-radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 320px;
+  height: 100%;
+}
+
+.writing-card h3 {
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.writing-card p {
+  margin-bottom: 14px;
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.writing-card div[style*="margin-bottom:18px"] {
+  color: var(--muted);
+  font-size: .95rem;
+  letter-spacing: .2px;
+}
+
+.writing-card a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  border-radius: 999px;
+  padding: 2px 0;
+  transition: background .2s, text-decoration-thickness .2s;
+}
+.writing-card a:hover {
+  text-decoration-thickness: 2px;
+  background: #f9fafb;
+}
+
+.writing-cta {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  border-radius: 999px;
+  padding: 2px 0;
+  transition: background .2s, text-decoration-thickness .2s;
+}
+.writing-cta:hover {
+  text-decoration-thickness: 2px;
+  background: #fffbe6;
+}
+
+.badge-pdf {
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 0.85em; /* ensure 85% of body text size */
+  color: #9ca3af;
+  background: #f9fafb;
+  padding: 2px 8px;
+  margin-left: 2px;
+}
+
