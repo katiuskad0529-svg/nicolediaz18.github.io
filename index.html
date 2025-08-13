@@ -271,6 +271,7 @@
       font-size: 16px;
       line-height: 1.45;
       color: #111827;
+      /* gray-900 */
       border-top: 1px solid #20322c;
       display: flex;
       align-items: center;
@@ -839,55 +840,133 @@
   </div>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-white"></section>
-    <div class="container mx-auto px-6">
-
-      <h2 class="text-3xl font-bold text-blue-700 mb-8">Contact</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        <div class="bg-blue-50 rounded-lg shadow p-6 flex flex-col items-center">
-          <i class="bi bi-geo-alt text-blue-600 text-3xl mb-2"></i>
-          <h3 class="font-bold mb-1">Address</h3>
-          <p>New York, NY</p>
+<section id="contact" class="py-16" style="background:var(--beige);">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start max-w-4xl mx-auto">
+      <!-- Left: Info -->
+      <div class="mb-8 md:mb-0">
+        <h2 class="text-3xl font-bold mb-2" style="color:var(--accent);">Contact</h2>
+        <p class="mb-4 text-base" style="color:var(--muted);">I respond within 1–2 business days.</p>
+        <div class="mb-4">
+          <div class="flex items-center mb-2">
+            <i class="bi bi-envelope" style="color:var(--accent); margin-right:0.6em;"></i>
+            <span style="color:var(--primary-dark); font-weight:500;">
+              <a href="mailto:katiuskad0529@gmail.com" style="color:var(--accent); text-decoration:underline;" tabindex="-1" aria-label="Email">katiuskad0529@gmail.com</a>
+            </span>
+          </div>
+          <div class="flex items-center mb-2">
+            <i class="bi bi-geo-alt" style="color:var(--accent); margin-right:0.6em;"></i>
+            <span style="color:var(--primary-dark);">New York City, NY</span>
+          </div>
+          <div class="flex items-center mb-2">
+            <i class="bi bi-calendar-check" style="color:var(--accent); margin-right:0.6em;"></i>
+            <span style="color:var(--primary-dark);">Open to full‑time roles in finance/analytics<br>and selective freelance automation projects.</span>
+          </div>
         </div>
-
-        <div class="bg-blue-50 rounded-lg shadow p-6 flex flex-col items-center"></div>
-          <i class="bi bi-telephone text-blue-600 text-3xl mb-2"></i>
-          <h3 class="font-bold mb-1">Call</h3>
-          <p>929-582-0108</p>
+        <!-- Optional Calendly link -->
+        <!--
+        <div class="mb-4">
+          <a href="https://calendly.com/yourcalendly/15min" target="_blank" style="color:var(--gold); text-decoration:underline; font-weight:500;">
+            Prefer a quick call? Book 15 min.
+          </a>
         </div>
-
-        <div class="bg-blue-50 rounded-lg shadow p-6 flex flex-col items-center"></div>
-          <i class="bi bi-envelope text-blue-600 text-3xl mb-2"></i>
-          <h3 class="font-bold mb-1">Email</h3>
-          <p>nicolediazcarranza1828@gmail.com</p>
+        -->
+        <div class="text-xs text-gray-500 mt-6" style="color:var(--muted);">
+          By submitting, you agree to be contacted about your inquiry. I don’t share your information.
         </div>
       </div>
-
-      <form action="forms/contact.php" method="post" class="space-y-6 max-w-xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <input type="text" name="name" class="form-input rounded border-gray-300 p-3" placeholder="Your Name" required="">
-          <input type="email" class="form-input rounded border-gray-300 p-3" name="email" placeholder="Your Email" required="">
-        </div>
-        <input type="text" class="form-input rounded border-gray-300 p-3 w-full" name="subject" placeholder="Subject" required="">
-        <textarea class="form-textarea rounded border-gray-300 p-3 w-full" name="message" rows="6" placeholder="Message" required=""></textarea>
-        <div class="text-center">
-          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition">Send Message</button>
-        </div>
-      </form>
-
+      <!-- Right: Form -->
+      <div>
+        <form id="contact-form" action="https://script.google.com/macros/s/AKfycbzUrjy-s_ZDE3NGVwcvgjYg-4xiWOqt2U6CUgL_mId5q2N4x1Z6NSdPbCHPRZH880nu/exec" method="POST" enctype="multipart/form-data" class="bg-white rounded-xl shadow p-6 border" style="border:1px solid var(--gold); padding-bottom:1.25rem;">
+          <!-- Honeypot -->
+          <input type="text" name="website" autocomplete="off" tabindex="-1" style="display:none;">
+          <div class="mb-4">
+            <label for="name" class="block font-semibold mb-1" style="color:#1a202c; font-size:1.07rem;">Full Name <span style="color:var(--gold);">*</span></label>
+            <input type="text" id="name" name="name" minlength="2" required autocomplete="name"
+              class="form-input w-full rounded border p-3"
+              style="border:1px solid var(--gold); background:#fff; color:#222; font-size:1rem;"
+              placeholder="Jane Smith">
+            <style>
+              #name::placeholder { color: #888; opacity: 1; }
+            </style>
+            <div class="text-xs text-red-600 mt-1 hidden" id="name-error"></div>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block font-semibold mb-1" style="color:#1a202c; font-size:1.07rem;">Work Email <span style="color:var(--gold);">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email"
+              class="form-input w-full rounded border p-3"
+              style="border:1px solid var(--gold); background:#fff; color:#222; font-size:1rem;"
+              placeholder="jane@company.com">
+            <style>
+              #email::placeholder { color: #888; opacity: 1; }
+            </style>
+            <div class="text-xs text-red-600 mt-1 hidden" id="email-error"></div>
+          </div>
+          <div class="mb-4">
+            <label for="topic" class="block font-semibold mb-1" style="color:#1a202c; font-size:1.07rem;">Topic <span style="color:var(--gold);">*</span></label>
+            <select id="topic" name="topic" required class="form-select w-full rounded border p-3"
+              style="border:1px solid var(--gold); background:#fff; color:#222; font-size:1rem;">
+              <option value="" style="color:#888;">Select one…</option>
+              <option>Hiring / Full‑time Opportunity</option>
+              <option>Collaboration / Project</option>
+              <option>Speaking / Media</option>
+              <option>General Inquiry</option>
+            </select>
+            <div class="text-xs text-red-600 mt-1 hidden" id="topic-error"></div>
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block font-semibold mb-1" style="color:#1a202c; font-size:1.07rem;">Message <span style="color:var(--gold);">*</span></label>
+            <textarea id="message" name="message" required minlength="20" maxlength="800" rows="5"
+              class="form-textarea w-full rounded border p-3"
+              style="border:1px solid var(--gold); background:#fff; color:#222; font-size:1rem;"
+              placeholder="How can I help? Please include context, timelines, or goals."></textarea>
+            <style>
+              #message::placeholder { color: #888; opacity: 1; }
+            </style>
+            <div class="text-xs text-gray-500 mt-1" id="message-count" style="color:var(--muted);">0 / 800</div>
+            <div class="text-xs text-red-600 mt-1 hidden" id="message-error"></div>
+          </div>
+          <div class="mb-4">
+            <label for="attachment" class="block font-semibold mb-1" style="color:#1a202c; font-size:1.07rem;">Attachment <span style="color:var(--muted); font-weight:400;">(PDF, max 5MB, optional)</span></label>
+            <input type="file" id="attachment" name="attachment" accept="application/pdf"
+              class="form-input w-full rounded border p-2"
+              style="border:1px solid var(--gold); background:#fff; color:#222; font-size:1rem;">
+            <div class="text-xs text-red-600 mt-1 hidden" id="attachment-error"></div>
+          </div>
+          <div class="mt-6">
+            <button type="submit" id="submit-btn" class="w-full font-bold py-3 rounded transition"
+              style="background:var(--accent); color:#fff; border:none; font-size:1.1rem;" >
+              Send Message
+            </button>
+            <!-- Divider above privacy line -->
+            <hr style="border:0; border-top:1px solid #ececec; margin:1.5rem 0 0.5rem 0;">
+            <div class="text-xs text-gray-600 mt-2" style="color:#4b5563;">
+              By submitting, you agree to be contacted about your inquiry. I don’t share your information.
+            </div>
+            <!-- Add backend script notice -->
+            <div class="text-xs text-gray-500 mt-1" style="color:var(--muted);">
+              Note: Messages are securely passed through a backend script in the <code>backend</code> folder for processing.
+            </div>
+          </div>
+          <div aria-live="polite" id="form-toast" class="mt-4 text-center text-sm" style="min-height:1.5em;"></div>
+        </form>
+      </div>
     </div>
-  </section><!-- /Contact Section -->
+  </div>
+</section>
+<!-- End Contact Section -->
 
-  <footer id="footer" class="bg-blue-900 text-white py-8">
+  <footer id="footer" style="background:var(--primary-dark); color:var(--beige); padding:2rem 0;">
     <div class="container mx-auto px-6 text-center">
-      <p class="mb-2">© <span>Copyright</span> <strong class="px-1">Katiuska Diaz</strong> <span>All Rights Reserved</span></p>
+      <p class="mb-2" style="color:var(--gold); font-weight:600;">
+        © <span>Copyright</span> <strong class="px-1" style="color:var(--accent);">Katiuska Diaz</strong> <span>All Rights Reserved</span>
+      </p>
       <div class="flex justify-center space-x-4 mb-2">
-        <a href="" class="hover:text-blue-300"><i class="bi bi-linkedin text-xl"></i></a>
-        <a href="" class="hover:text-blue-300"><i class="bi bi-twitter-x text-xl"></i></a>
+        <a href="https://www.linkedin.com/in/nicolediaz18" target="_blank" class="hover:text-[var(--gold)]" style="color:var(--accent);"><i class="bi bi-linkedin text-xl"></i></a>
+        <a href="https://twitter.com/" target="_blank" class="hover:text-[var(--gold)]" style="color:var(--accent);"><i class="bi bi-twitter-x text-xl"></i></a>
       </div>
-      <div class="text-sm">
-        Designed by <a href="https://bootstrapmade.com/" class="underline text-blue-300">BootstrapMade</a>
+      <div class="text-sm" style="color:var(--muted);">
+        Designed by <a href="https://bootstrapmade.com/" class="underline" style="color:var(--gold);">BootstrapMade</a>
       </div>
     </div>
   </footer>
@@ -912,6 +991,151 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+  // Contact form validation and UX
+  (function() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    const topic = form.querySelector('#topic');
+    const message = form.querySelector('#message');
+    const attachment = form.querySelector('#attachment');
+    const submitBtn = form.querySelector('#submit-btn');
+    const toast = form.querySelector('#form-toast');
+    const nameError = form.querySelector('#name-error');
+    const emailError = form.querySelector('#email-error');
+    const topicError = form.querySelector('#topic-error');
+    const messageError = form.querySelector('#message-error');
+    const attachmentError = form.querySelector('#attachment-error');
+    const messageCount = form.querySelector('#message-count');
+
+    // Accessibility: focus toast on update
+    function showToast(msg, color) {
+      toast.textContent = msg;
+      toast.style.color = color || "";
+      toast.setAttribute('tabindex', '-1');
+      toast.focus && toast.focus();
+    }
+
+    function validate() {
+      let valid = true;
+      // Name
+      if (name.value.trim().length < 2) {
+        nameError.textContent = "Please enter your full name.";
+        nameError.classList.remove('hidden');
+        valid = false;
+      } else {
+        nameError.classList.add('hidden');
+      }
+      // Email
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value.trim())) {
+        emailError.textContent = "Please enter a valid email address.";
+        emailError.classList.remove('hidden');
+        valid = false;
+      } else {
+        emailError.classList.add('hidden');
+      }
+      // Topic
+      if (!topic.value) {
+        topicError.textContent = "Please select a topic.";
+        topicError.classList.remove('hidden');
+        valid = false;
+      } else {
+        topicError.classList.add('hidden');
+      }
+      // Message
+      if (message.value.trim().length < 20) {
+        messageError.textContent = "Message must be at least 20 characters.";
+        messageError.classList.remove('hidden');
+        valid = false;
+      } else {
+        messageError.classList.add('hidden');
+      }
+      // Attachment
+      if (attachment.files.length > 0) {
+        const file = attachment.files[0];
+        if (file.type !== "application/pdf" || file.size > 5 * 1024 * 1024) {
+          attachmentError.textContent = "PDF only, max 5MB.";
+          attachmentError.classList.remove('hidden');
+          valid = false;
+        } else {
+          attachmentError.classList.add('hidden');
+        }
+      } else {
+        attachmentError.classList.add('hidden');
+      }
+      // Enable/disable submit
+      submitBtn.disabled = !valid;
+      return valid;
+    }
+
+    // Live char count for message
+    message.addEventListener('input', function() {
+      messageCount.textContent = `${message.value.length} / 800`;
+      validate();
+    });
+    [name, email, topic, message, attachment].forEach(el => {
+      el.addEventListener('input', validate);
+      el.addEventListener('change', validate);
+    });
+
+    // Initial validation
+    validate();
+
+    // Submit handler with fetch
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!validate()) return;
+      submitBtn.disabled = true;
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Sending…";
+      showToast("", "");
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+      })
+      .then(async (response) => {
+        let msg = "Thanks! I’ll reply within 1–2 business days.";
+        if (!response.ok) {
+          msg = "Error: Could not send. Please try again or email directly.";
+        } else {
+          // Try to parse JSON or text for a custom message
+          try {
+            const data = await response.json();
+            if (data && data.result) msg = data.result;
+          } catch {
+            try {
+              const text = await response.text();
+              if (text && text.length < 200) msg = text;
+            } catch {}
+          }
+        }
+        submitBtn.textContent = msg;
+        showToast(msg, response.ok ? "var(--accent)" : "var(--gold)");
+        if (response.ok) {
+          form.reset();
+          messageCount.textContent = "0 / 800";
+        }
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }, 3500);
+      })
+      .catch(() => {
+        const msg = "Error: Could not send. Please try again or email directly.";
+        submitBtn.textContent = msg;
+        showToast(msg, "var(--gold)");
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }, 3500);
+      });
+    });
+  })();     
+  </script>
 
 </body>
 
