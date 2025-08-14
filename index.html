@@ -509,7 +509,7 @@
   <section id="hero" class="hero-fin d-flex align-items-center" style="padding: 48px 0;">
     <div class="container" data-aos="fade-up" data-aos-delay="80">
       <div class="row align-items-center gy-4 flex-nowrap">
-        <div class="col-lg-7 flex flex-col justify-center" style="max-width:520px;">
+        <div class="col-lg-6 flex flex-col justify-center" style="max-width:520px;">
           <div class="hero-kicker mb-1" style="margin-bottom:0.5rem;">Business • Finance • Automation</div>
           <h1 class="mt-2 mb-2" style="font-size:clamp(2.1rem,5vw,3rem);line-height:1.08;font-weight:800;letter-spacing:.01em;">
             Business & Finance Analyst | Automation Specialist
@@ -530,7 +530,7 @@
           </div>
         </div>
         <!-- Portrait on the right side, not under text -->
-        <div class="col-lg-5 d-flex justify-content-end align-items-center" style="min-height:320px;">
+        <div class="col-lg-5 align-items-center" style="min-height:320px;">
           <img src="assets/images/hero-finance-placeholder.jpg"
                alt="Katiuska Diaz Portrait"
                class="img-fluid rounded-xl shadow-xl hero-photo"
@@ -566,15 +566,18 @@
         <span>💼 Finance & Analytics Expertise</span>
       </div>
       <div class="flex justify-center gap-4 mt-2" style="opacity:.7;">
-        <img src="assets/img/logos/n8n-logo.svg" alt="n8n" style="height:28px;">
-        <img src="assets/img/logos/google-sheets-logo.svg" alt="Google Sheets" style="height:28px;">
-        <img src="assets/img/logos/python-logo.svg" alt="Python" style="height:28px;">
-        <img src="assets/img/logos/excel-logo.svg" alt="Excel" style="height:28px;">
-      </div>
-    </div>
+    <img src="img/n8n logo .png" alt="n8n" style="height:28px;">
+    <img src="img/icons8-google-sheets-48.png" alt="Google Sheets" style="height:28px;">
+    <img src="img/icons8-python-48.png" alt="Python" style="height:28px;">
+    <img src="img/icons8-excel-48.png" alt="Excel" style="height:28px;">
+    <img src="img/icons8-gmail-48.png" alt="Gmail" style="height:28px;">
+   
+</div>
+
   </section>
 
   <!-- Features -->
+  <!--
   <section class="px-8 py-12">
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
@@ -587,7 +590,7 @@
       </div>
     </div>
   </section>
-
+  -->
   <!-- Divider using palette (gold and blush) before Portfolio -->
   <div class="w-full flex justify-center my-10">
     <div style="width:90px; height:6px; border-radius:3px; background:linear-gradient(90deg, var(--gold), var(--blush));"></div>
@@ -600,136 +603,200 @@
   </div>
 
   <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio section">
+  <section id="portfolio" class="portfolio section" style="padding-bottom:48px;">
     <div class="container">
-      <div class="row gy-4 portfolio-grid">
-
-        <!-- PROJECT 1: Fed Interest Rate Tracker (Featured, Automation) -->
-        <div class="col-lg-4 col-md-6 portfolio-item automation featured">
-          <div class="card portfolio-wrap">
-            <img src="assets/images/fed-rate-chart.png" class="img-fluid rounded-xl" alt="Fed Rate Chart" loading="lazy" decoding="async">
-            <div class="card-body">
-              <span class="badge bg-primary mb-2">Featured</span>
-              <h4 class="card-title mb-1" style="font-size:1.25rem;font-weight:700;">Fed Interest Rate Tracker</h4>
-              <p class="text-muted mb-2" style="font-size:.98rem;">Automates daily Fed rate updates to Google Sheets and email. Stack: n8n, Sheets, Gmail.</p>
-              <div class="d-flex gap-2 mt-2">
-                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-fed">View Project</button>
-                <a href="assets/images/fed-rate-chart.png" class="btn btn-outline-primary btn-sm portfolio-lightbox" data-gallery="portfolioGallery" title="Fed Rate Chart">Screenshot</a>
+      <!-- Filter Bar -->
+      <div class="flex justify-center gap-4 mb-8">
+        <button class="portfolio-filter-btn active" data-filter="*" style="padding:7px 22px;border-radius:999px;border:none;background:var(--gold);color:#222;font-weight:600;transition:background .18s;">All</button>
+        <button class="portfolio-filter-btn" data-filter=".automation" style="padding:7px 22px;border-radius:999px;border:none;background:#f3f4f6;color:#222;font-weight:500;">Automation</button>
+        <button class="portfolio-filter-btn" data-filter=".econometrics" style="padding:7px 22px;border-radius:999px;border:none;background:#f3f4f6;color:#222;font-weight:500;">Analytics</button>
+        <button class="portfolio-filter-btn" data-filter=".research" style="padding:7px 22px;border-radius:999px;border:none;background:#f3f4f6;color:#222;font-weight:500;">Research</button>
+      </div>
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem 2.5rem;justify-items:center;">
+        <!-- PROJECT 1: Fed Interest Rate Tracker -->
+        <div class="portfolio-item automation featured" style="width:100%;max-width:390px;">
+          <div class="card portfolio-wrap group" style="border-radius:18px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);background:#fff;transition:box-shadow .18s,background .18s;">
+            <div style="position:relative;">
+              <img src="img/fed-rate-n8n-workflow.png" alt="Fed Rate Chart" loading="lazy" decoding="async" style="width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .22s;">
+              <span class="portfolio-tag" style="position:absolute;top:12px;left:12px;background:#e0e7ef;color:#1e293b;font-size:.92em;padding:3px 14px;border-radius:999px;font-weight:600;">Automation</span>
+            </div>
+            <div class="card-body" style="padding:1.4rem 1.2rem 1.2rem 1.2rem;display:flex;flex-direction:column;align-items:flex-start;min-height:220px;">
+              <h4 class="card-title" style="font-size:1.22rem;font-weight:800;margin-bottom:0.5rem;line-height:1.25;">Fed Interest Rate Tracker</h4>
+              <p class="text-muted" style="font-size:1.01rem;line-height:1.5;margin-bottom:1.1rem;max-height:4.5em;overflow:hidden;">
+                Automates daily Fed rate updates to Google Sheets and email.<br>
+                <b>Stack:</b> n8n, Sheets, Gmail.
+              </p>
+              <div class="flex gap-2 mt-auto">
+                <a href="https://docs.google.com/spreadsheets/d/1sHqoFs7xgSj0Eq2Zd2yT7xYs9F_YwMoKrb1Vgn3zSKA/edit?usp=sharing"><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-fed" style="padding:8px 18px;font-weight:600;">View Project</button></a>
+                <a href="img/fed-rate-chart.png" class="btn btn-outline-primary btn-sm portfolio-lightbox" data-gallery="portfolioGallery" title="Fed Rate Chart" style="padding:8px 18px;">See Screenshot</a>
               </div>
             </div>
           </div>
         </div>
-        <!-- Modal for Fed Interest Rate Tracker -->
-        <div id="modal-fed" class="modal portfolio-modal">
-          <div class="modal-content">
-            <span class="close" data-dismiss="modal">&times;</span>
-            <h2>Fed Interest Rate Tracker</h2>
-            <img src="assets/images/fed-rate-n8n-workflow.png" class="img-fluid rounded-xl mb-3" alt="n8n workflow" loading="lazy" decoding="async">
-            <img src="assets/images/fed-rate-chart.png" class="img-fluid rounded-xl mb-3" alt="Google Sheets chart" loading="lazy" decoding="async">
-            <p>
-              <b>Stack:</b> n8n, Google Sheets API, Gmail<br>
-              <b>Workflow:</b> Schedule → HTTP (St. Louis Fed API) → Format → Append to Sheets → Email<br>
-              <b>Outcome:</b> Zero manual updates; instant rate history + chart
-            </p>
-          </div>
-        </div>
-
-        <!-- PROJECT 2: Oil & Inflation Econometrics (Econometrics) -->
-        <div class="col-lg-4 col-md-6 portfolio-item econometrics">
-          <div class="card portfolio-wrap">
-            <img src="assets/images/oil-inflation-project.png" class="img-fluid rounded-xl" alt="Oil Inflation Project" loading="lazy" decoding="async">
-            <div class="card-body">
-              <h4 class="card-title mb-1" style="font-size:1.18rem;font-weight:700;">When Oil Boils, Does Global Inflation Bubble?</h4>
-              <p class="text-muted mb-2" style="font-size:.98rem;">Econometrics project: oil price shocks and global inflation using time-series modeling.</p>
-              <div class="d-flex gap-2 mt-2">
-                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-oil">View Project</button>
-                <a href="assets/images/oil-inflation-project.png" class="btn btn-outline-primary btn-sm portfolio-lightbox" data-gallery="portfolioGallery" title="Oil Inflation Screenshot">Screenshot</a>
+        <!-- PROJECT 2: Oil & Inflation Econometrics -->
+        <div class="portfolio-item econometrics" style="width:100%;max-width:390px;">
+          <div class="card portfolio-wrap group" style="border-radius:18px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);background:#fff;transition:box-shadow .18s,background .18s;">
+            <div style="position:relative;">
+              <img src="img/Screenshot 2025-08-14 at 12.02.28.png" alt="Oil Inflation Chart" loading="lazy" decoding="async" style="width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .22s;">
+              <span class="portfolio-tag" style="position:absolute;top:12px;left:12px;background:#e0e7ef;color:#1e293b;font-size:.92em;padding:3px 14px;border-radius:999px;font-weight:600;">Analytics</span>
+            </div>
+            <div class="card-body" style="padding:1.4rem 1.2rem 1.2rem 1.2rem;display:flex;flex-direction:column;align-items:flex-start;min-height:220px;">
+              <h4 class="card-title" style="font-size:1.18rem;font-weight:800;margin-bottom:0.5rem;line-height:1.25;">When Oil Boils, Does Global Inflation Bubble?</h4>
+              <p class="text-muted" style="font-size:1.01rem;line-height:1.5;margin-bottom:1.1rem;max-height:4.5em;overflow:hidden;">
+                Econometrics project: oil price shocks and global inflation using time-series modeling.
+              </p>
+              <div class="flex gap-2 mt-auto">
+                <a href="docs/oil.pdf" class="btn btn-primary btn-sm" style="padding:8px 18px;font-weight:600;">View Project</a>
               </div>
             </div>
           </div>
         </div>
-        <!-- Modal for Oil Inflation Project -->
-        <div id="modal-oil" class="modal portfolio-modal">
-          <div class="modal-content">
-            <span class="close" data-dismiss="modal">&times;</span>
-            <h2>When Oil Boils, Does Global Inflation Bubble?</h2>
-            <img src="assets/images/oil-inflation-project.png" class="img-fluid rounded-xl mb-3" alt="Econometrics cover" loading="lazy" decoding="async">
-            <p>
-              <b>Focus:</b> Oil price shocks → CPI/Inflation dynamics<br>
-              <b>Methods:</b> Stationarity checks, VAR/ARIMA, impulse responses<br>
-              <b>Deliverables:</b> Clean dataset, model diagnostics, visualizations, report
-            </p>
-          </div>
-        </div>
-
-        <!-- PROJECT 3: Trade & GDP Research (Research) -->
-        <div class="col-lg-4 col-md-6 portfolio-item research">
-          <div class="card portfolio-wrap">
-            <img src="assets/images/trade-gdp-paper.png" class="img-fluid rounded-xl" alt="Trade GDP Paper" loading="lazy" decoding="async">
-            <div class="card-body">
-              <h4 class="card-title mb-1" style="font-size:1.18rem;font-weight:700;">Effect of International Trade on GDP</h4>
-              <p class="text-muted mb-2" style="font-size:.98rem;">Published research: University of Lima. Trade and GDP analysis.</p>
-              <div class="d-flex gap-2 mt-2">
-                <a href="https://repositorio.ulima.edu.pe/handle/20.500.12724/13617" target="_blank" class="btn btn-primary btn-sm">Read Publication</a>
-                <a href="assets/images/trade-gdp-paper.png" class="btn btn-outline-primary btn-sm portfolio-lightbox" data-gallery="portfolioGallery" title="Trade GDP Screenshot">Screenshot</a>
+        <!-- PROJECT 3: Trade & GDP Research -->
+        <div class="portfolio-item research" style="width:100%;max-width:390px;">
+          <div class="card portfolio-wrap group" style="border-radius:18px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);background:#fff;transition:box-shadow .18s,background .18s;">
+            <div style="position:relative;">
+              <img src="img/Screenshot 2025-08-14 at 12.17.54.png" alt="Trade GDP Paper" loading="lazy" decoding="async" style="width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .22s;">
+              <span class="portfolio-tag" style="position:absolute;top:12px;left:12px;background:#e0e7ef;color:#1e293b;font-size:.92em;padding:3px 14px;border-radius:999px;font-weight:600;">Research</span>
+            </div>
+            <div class="card-body" style="padding:1.4rem 1.2rem 1.2rem 1.2rem;display:flex;flex-direction:column;align-items:flex-start;min-height:220px;">
+              <h4 class="card-title" style="font-size:1.18rem;font-weight:800;margin-bottom:0.5rem;line-height:1.25;">Effect of International Trade on GDP</h4>
+              <p class="text-muted" style="font-size:1.01rem;line-height:1.5;margin-bottom:1.1rem;max-height:4.5em;overflow:hidden;">
+                Published research: University of Lima. Trade and GDP analysis.
+              </p>
+              <div class="flex gap-2 mt-auto">
+                <a href="https://repositorio.ulima.edu.pe/handle/20.500.12724/13617" target="_blank" class="btn btn-primary btn-sm" style="padding:8px 18px;font-weight:600;">Read Publication</a>
+                
               </div>
             </div>
           </div>
         </div>
+      </div><!-- /portfolio-grid -->
 
-      </div><!-- /row -->
+      <!-- Modals (unchanged, keep outside grid for accessibility) -->
+      <!-- Modal for Fed Interest Rate Tracker -->
+      <div id="modal-fed" class="modal portfolio-modal">
+        <div class="modal-content">
+          <span class="close" data-dismiss="modal">&times;</span>
+          <h2>Fed Interest Rate Tracker</h2>
+          <img src="assets/images/fed-rate-n8n-workflow.png" class="img-fluid rounded-xl mb-3" alt="n8n workflow" loading="lazy" decoding="async">
+          <img src="assets/images/fed-rate-chart.png" class="img-fluid rounded-xl mb-3" alt="Google Sheets chart" loading="lazy" decoding="async">
+          <p>
+            <b>Stack:</b> n8n, Google Sheets API, Gmail<br>
+            <b>Workflow:</b> Schedule → HTTP (St. Louis Fed API) → Format → Append to Sheets → Email<br>
+            <b>Outcome:</b> Zero manual updates; instant rate history + chart
+          </p>
+        </div>
+      </div>
+      <!-- Modal for Oil Inflation Project -->
+      <div id="modal-oil" class="modal portfolio-modal">
+        <div class="modal-content">
+          <span class="close" data-dismiss="modal">&times;</span>
+          <h2>When Oil Boils, Does Global Inflation Bubble?</h2>
+          <img src="assets/images/oil-inflation-project.png" class="img-fluid rounded-xl mb-3" alt="Econometrics cover" loading="lazy" decoding="async">
+          <p>
+            <b>Focus:</b> Oil price shocks → CPI/Inflation dynamics<br>
+            <b>Methods:</b> Stationarity checks, VAR/ARIMA, impulse responses<br>
+            <b>Deliverables:</b> Clean dataset, model diagnostics, visualizations, report
+          </p>
+        </div>
+      </div>
     </div><!-- /container -->
+    <style>
+      /* Portfolio Card Hover Effects */
+      .portfolio-wrap.group:hover {
+        background: #f9fafb;
+        box-shadow: 0 8px 32px rgba(2,6,23,0.10);
+      }
+      .portfolio-wrap.group:hover img {
+        transform: scale(1.045);
+      }
+      .portfolio-filter-btn.active,
+      .portfolio-filter-btn:focus {
+        background: var(--gold) !important;
+        color: #222 !important;
+      }
+      .portfolio-filter-btn {
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      // Simple filter logic (no jQuery)
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+        const items = document.querySelectorAll('.portfolio-item');
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.getAttribute('data-filter');
+            items.forEach(item => {
+              if (filter === '*' || item.classList.contains(filter.replace('.', ''))) {
+                item.style.display = '';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
   </section>
   <!-- End Portfolio Section -->
 
   <!-- Skills Section -->
   <section id="skills" class="skills-section" style="background:var(--beige); border-top:2px solid var(--accent); color:var(--text-dark);">
-  <div class="container">
-    <header class="skills-header">
-      <h2 style="color:var(--accent);">Skills</h2>
-      <p class="subtitle" style="color:var(--muted); text-align:center;">
-        Core capabilities across finance, analytics, and automation.
-      </p>
-    </header>
-    <div class="skills-grid">
-      <article class="skills-card" style="background:#fff; border:1px solid var(--border); border-radius:var(--radius); color:var(--text-dark);">
-        <h3 class="skills-title" style="font-size:1.25rem;font-weight:700; margin-bottom:10px; color:var(--primary-dark);">
-          Professional Skills
-        </h3>
-        <ul class="skills-list">
-          <li>Financial Modeling &amp; Reporting</li>
-          <li>Business Analytics &amp; Data Visualization</li>
-          <li>Market &amp; Economic Research</li>
-          <li>Strategic Marketing &amp; Media Planning</li>
-          <li>Project Management &amp; Process Optimization</li>
-          <li>Financial Advisor</li>
-        </ul>
-      </article>
-      <article class="skills-card" style="background:#fff; border:1px solid var(--border); border-radius:var(--radius); color:var(--text-dark);">
-        <h3 class="skills-title" style="font-size:1.25rem;font-weight:700; margin-bottom:10px; color:var(--primary-dark);">
-          Technical Skills
-        </h3>
-        <ul class="skills-list">
-          <li>n8n Automation &amp; API Integrations</li>
-          <li>Google Sheets &amp; Excel (VBA, advanced formulas)</li>
-          <li>Microsoft Office</li>
-          <li>HTML, CSS, JavaScript, WordPress</li>
-          <li>Data Analysis (Looker Studio), basic SQL</li>
-        </ul>
-      </article>
-      <article class="skills-card" style="background:#fff; border:1px solid var(--border); border-radius:var(--radius); color:var(--text-dark);">
-        <h3 class="skills-title" style="font-size:1.25rem;font-weight:700; margin-bottom:10px; color:var(--primary-dark);">
-          Languages
-        </h3>
-        <ul class="skills-list">
-          <li>English — Fluent</li>
-          <li>Spanish — Native</li>
-          <li>Mandarin — Basic (HSK-1)</li>
-        </ul>
-      </article>
+    <div class="container">
+      <header class="skills-header" style="text-align:center; margin-bottom:2.2rem;">
+        <h2 style="font-size:2.3rem; font-weight:800; color:var(--accent); margin-bottom:0.5rem; letter-spacing:.01em;">
+          Skills
+        </h2>
+        <p class="subtitle" style="color:var(--muted); font-size:1.08rem; margin-bottom:0.5rem;">
+          Core capabilities across finance, analytics, and automation.
+        </p>
+      </header>
+      <div class="skills-grid" style="display:grid;grid-template-columns:1fr;gap:2.2rem 2.5rem;">
+        <!-- Two-column layout on desktop -->
+        <div style="display:grid;grid-template-columns:1fr;gap:2.2rem 2.5rem;" class="md:grid md:grid-cols-2 md:gap-x-10">
+          <!-- Professional Skills -->
+          <article class="skills-card" style="background:#fff; border:1px solid var(--skills-line); border-radius:var(--skills-radius); color:var(--text-dark); padding:2rem 1.5rem 1.2rem 1.5rem;">
+            <h3 class="skills-title" style="font-size:1.18rem;font-weight:700; margin-bottom:1.1rem; color:var(--primary-dark); letter-spacing:.01em;">
+              Professional Skills
+            </h3>
+            <ul class="skills-list" style="margin-top:0.7rem;">
+              <li style="margin-bottom:0.35rem;">Financial Analysis</li>
+              <li style="margin-bottom:0.35rem;">Business Analytics &amp; Data Visualization</li>
+              <li style="margin-bottom:0.35rem;">Market &amp; Economic Research</li>
+              <li style="margin-bottom:0.35rem;">Project Management &amp; Process Optimization</li>
+            </ul>
+          </article>
+          <!-- Technical Skills -->
+          <article class="skills-card" style="background:#fff; border:1px solid var(--skills-line); border-radius:var(--skills-radius); color:var(--text-dark); padding:2rem 1.5rem 1.2rem 1.5rem;">
+            <h3 class="skills-title" style="font-size:1.18rem;font-weight:700; margin-bottom:1.1rem; color:var(--primary-dark); letter-spacing:.01em;">
+              Technical Skills
+            </h3>
+            <ul class="skills-list" style="margin-top:0.7rem;">
+              <li style="margin-bottom:0.35rem;">n8n Automation &amp; API Integrations</li>
+              <li style="margin-bottom:0.35rem;">Google Sheets &amp; Excel (VBA)</li>
+              <li style="margin-bottom:0.35rem;">HTML, CSS, JavaScript, WordPress</li>
+              <li style="margin-bottom:0.35rem;">Basic SQL / Looker Studio</li>
+            </ul>
+          </article>
+        </div>
+        <!-- Languages (full width, below columns) -->
+        <article class="skills-card" style="background:#fff; border:1px solid var(--skills-line); border-radius:var(--skills-radius); color:var(--text-dark); margin-top:0 rem; padding:2rem 1.5rem 1.2rem 1.5rem; max-width:600px; margin-left:auto; margin-right:auto;">
+          <h3 class="skills-title" style="font-size:1.18rem;font-weight:700; margin-bottom:1.1rem; color:var(--primary-dark); letter-spacing:.01em;">
+            Languages
+          </h3>
+          <ul class="skills-list" style="margin-top:0.8rem;">
+            <li style="margin-bottom:0.35rem;">English—Fluent</li>
+            <li style="margin-bottom:0.35rem;">Spanish—Native</li>
+            <li style="margin-bottom:0.35rem;">Mandarin—Basic (HSK-1)</li>
+          </ul>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- End Skills Section -->
 
   <!-- Writing Section -->
