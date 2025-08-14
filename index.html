@@ -623,13 +623,28 @@
             </div>
             <div class="card-body" style="padding:1.4rem 1.2rem 1.2rem 1.2rem;display:flex;flex-direction:column;align-items:flex-start;min-height:220px;">
               <h4 class="card-title" style="font-size:1.22rem;font-weight:800;margin-bottom:0.5rem;line-height:1.25;">Fed Interest Rate Tracker</h4>
-              <p class="text-muted" style="font-size:1.01rem;line-height:1.5;margin-bottom:1.1rem;max-height:4.5em;overflow:hidden;">
-                Automates daily Fed rate updates to Google Sheets and email.<br>
-                <b>Stack:</b> n8n, Sheets, Gmail.
+              <p class="text-muted" style="font-size:1.01rem;line-height:1.5;margin-bottom:1.1rem;max-height:2.5em;overflow:hidden;">
+                Automates daily Fed rate updates to Google Sheets and email.
               </p>
-              <div class="flex gap-2 mt-auto">
-                <a href="https://docs.google.com/spreadsheets/d/1sHqoFs7xgSj0Eq2Zd2yT7xYs9F_YwMoKrb1Vgn3zSKA/edit?usp=sharing"><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-fed" style="padding:8px 18px;font-weight:600;">View Project</button></a>
+              <div class="flex gap-2 mt-auto" style="width:100%;justify-content:center;">
+                <a href="https://docs.google.com/spreadsheets/d/1sHqoFs7xgSj0Eq2Zd2yT7xYs9F_YwMoKrb1Vgn3zSKA/edit?usp=sharing">
+                  <button class="btn btn-primary btn-sm" style="padding:8px 18px;font-weight:600;">View Project</button>
+                </a>
+                <button class="btn btn-outline-primary btn-sm" style="padding:8px 18px;" onclick="showDetails('fed-details')">See Details</button>
                 <a href="img/fed-rate-chart.png" class="btn btn-outline-primary btn-sm portfolio-lightbox" data-gallery="portfolioGallery" title="Fed Rate Chart" style="padding:8px 18px;">See Screenshot</a>
+              </div>
+              <!-- Hidden Details Panel -->
+              <div id="fed-details" class="project-details-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.32);z-index:1000;align-items:center;justify-content:center;">
+                <div style="background:#fff;border-radius:18px;max-width:420px;width:92vw;padding:2rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
+                  <button onclick="hideDetails('fed-details')" style="position:absolute;top:12px;right:18px;font-size:1.5rem;background:none;border:none;cursor:pointer;color:#888;">&times;</button>
+                  <h4 style="font-size:1.18rem;font-weight:700;margin-bottom:1rem;">Fed Interest Rate Tracker</h4>
+                  <ul style="font-size:1.01rem;line-height:1.7;padding-left:1.1em;">
+                    <li><b>Stack:</b> n8n, Google Sheets API, Gmail</li>
+                    <li><b>Workflow:</b> Auto-retrieves daily Fed rates → appends to Sheets → sends email updates</li>
+                    <li><b>Outcome:</b> Zero manual updates, instant rate history & chart</li>
+                    <li><b>Deliverables:</b> Automated workflow, Google Sheet, daily email</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -643,11 +658,25 @@
             </div>
             <div class="card-body" style="padding:1.4rem 1.2rem 1.2rem 1.2rem;display:flex;flex-direction:column;align-items:flex-start;min-height:220px;">
               <h4 class="card-title" style="font-size:1.18rem;font-weight:800;margin-bottom:0.5rem;line-height:1.25;">When Oil Boils, Does Global Inflation Bubble?</h4>
-              <p class="text-muted" style="font-size:1.01rem;line-height:1.5;margin-bottom:1.1rem;max-height:4.5em;overflow:hidden;">
+              <p class="text-muted" style="font-size:1.01rem;line-height:1.5;margin-bottom:1.1rem;max-height:2.5em;overflow:hidden;">
                 Econometrics project: oil price shocks and global inflation using time-series modeling.
               </p>
-              <div class="flex gap-2 mt-auto">
+              <div class="flex gap-2 mt-auto" style="width:100%;justify-content:center;">
                 <a href="docs/oil.pdf" class="btn btn-primary btn-sm" style="padding:8px 18px;font-weight:600;">View Project</a>
+                <button class="btn btn-outline-primary btn-sm" style="padding:8px 18px;" onclick="showDetails('oil-details')">See Details</button>
+              </div>
+              <!-- Hidden Details Panel -->
+              <div id="oil-details" class="project-details-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.32);z-index:1000;align-items:center;justify-content:center;">
+                <div style="background:#fff;border-radius:18px;max-width:420px;width:92vw;padding:2rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
+                  <button onclick="hideDetails('oil-details')" style="position:absolute;top:12px;right:18px;font-size:1.5rem;background:none;border:none;cursor:pointer;color:#888;">&times;</button>
+                  <h4 style="font-size:1.18rem;font-weight:700;margin-bottom:1rem;">When Oil Boils, Does Global Inflation Bubble?</h4>
+                  <ul style="font-size:1.01rem;line-height:1.7;padding-left:1.1em;">
+                    <li><b>Stack:</b> Excel, Python (pandas, statsmodels), FRED, World Bank</li>
+                    <li><b>Workflow:</b> Collects oil & CPI data → runs time-series models → visualizes inflation impact</li>
+                    <li><b>Outcome:</b> Clear link between oil shocks & global inflation, actionable insights</li>
+                    <li><b>Deliverables:</b> Clean dataset, model diagnostics, charts, PDF report</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -661,12 +690,25 @@
             </div>
             <div class="card-body" style="padding:1.4rem 1.2rem 1.2rem 1.2rem;display:flex;flex-direction:column;align-items:flex-start;min-height:220px;">
               <h4 class="card-title" style="font-size:1.18rem;font-weight:800;margin-bottom:0.5rem;line-height:1.25;">Effect of International Trade on GDP</h4>
-              <p class="text-muted" style="font-size:1.01rem;line-height:1.5;margin-bottom:1.1rem;max-height:4.5em;overflow:hidden;">
+              <p class="text-muted" style="font-size:1.01rem;line-height:1.5;margin-bottom:1.1rem;max-height:2.5em;overflow:hidden;">
                 Published research: University of Lima. Trade and GDP analysis.
               </p>
-              <div class="flex gap-2 mt-auto">
+              <div class="flex gap-2 mt-auto" style="width:100%;justify-content:center;">
                 <a href="https://repositorio.ulima.edu.pe/handle/20.500.12724/13617" target="_blank" class="btn btn-primary btn-sm" style="padding:8px 18px;font-weight:600;">Read Publication</a>
-                
+                <button class="btn btn-outline-primary btn-sm" style="padding:8px 18px;" onclick="showDetails('trade-details')">See Details</button>
+              </div>
+              <!-- Hidden Details Panel -->
+              <div id="trade-details" class="project-details-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.32);z-index:1000;align-items:center;justify-content:center;">
+                <div style="background:#fff;border-radius:18px;max-width:420px;width:92vw;padding:2rem 1.5rem;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
+                  <button onclick="hideDetails('trade-details')" style="position:absolute;top:12px;right:18px;font-size:1.5rem;background:none;border:none;cursor:pointer;color:#888;">&times;</button>
+                  <h4 style="font-size:1.18rem;font-weight:700;margin-bottom:1rem;">Effect of International Trade on GDP</h4>
+                  <ul style="font-size:1.01rem;line-height:1.7;padding-left:1.1em;">
+                    <li><b>Stack:</b> Excel, World Bank, UN Comtrade, Stata</li>
+                    <li><b>Workflow:</b> Compiles trade & GDP data → runs regression analysis → compares countries</li>
+                    <li><b>Outcome:</b> Shows trade’s impact on GDP growth in developed vs. developing economies</li>
+                    <li><b>Deliverables:</b> Published paper, dataset, summary charts</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -675,6 +717,7 @@
 
       <!-- Modals (unchanged, keep outside grid for accessibility) -->
       <!-- Modal for Fed Interest Rate Tracker -->
+      <!--
       <div id="modal-fed" class="modal portfolio-modal">
         <div class="modal-content">
           <span class="close" data-dismiss="modal">&times;</span>
@@ -688,7 +731,9 @@
           </p>
         </div>
       </div>
+      -->
       <!-- Modal for Oil Inflation Project -->
+      <!--
       <div id="modal-oil" class="modal portfolio-modal">
         <div class="modal-content">
           <span class="close" data-dismiss="modal">&times;</span>
@@ -701,6 +746,7 @@
           </p>
         </div>
       </div>
+      -->
     </div><!-- /container -->
     <style>
       /* Portfolio Card Hover Effects */
@@ -1204,6 +1250,26 @@
   })();     
   </script>
 
+  <!-- Add this script before </body> -->
+<script>
+  function showDetails(id) {
+    document.getElementById(id).style.display = "flex";
+    setTimeout(function() {
+      document.getElementById(id).querySelector('div').focus && document.getElementById(id).querySelector('div').focus();
+    }, 50);
+  }
+  function hideDetails(id) {
+    document.getElementById(id).style.display = "none";
+  }
+  // Optional: close modal on ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape") {
+      document.querySelectorAll('.project-details-modal').forEach(function(modal) {
+        modal.style.display = "none";
+      });
+    }
+  });
+</script>
 </body>
 
 </html>
