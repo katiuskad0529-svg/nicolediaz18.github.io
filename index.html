@@ -491,7 +491,7 @@
   <header id="header" class="navbar w-full py-4 px-8 flex items-center justify-between" style="background:rgba(14,20,18,.9);">
     <div class="flex items-center gap-4">
       <!-- Logo name left corner -->
-      <span class="font-extrabold text-lg" style="color:#F2C94C; letter-spacing:0.04em;">KATIUSKA DIAZ</span>
+      <span class="font-extrabold text-lg" style="color:#F2C94C; letter-spacing:0.50em;">KATIUSKA DIAZ</span>
     </div>
     <nav>
       <ul class="flex gap-8 text-base font-semibold" style="letter-spacing:0.04em;">
@@ -506,10 +506,17 @@
     </nav>
   </header>
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero-fin d-flex align-items-center" style="padding: 48px 0;">
-    <div class="container" data-aos="fade-up" data-aos-delay="80">
-      <div class="row align-items-center gy-4 flex-nowrap">
-        <div class="col-lg-6 flex flex-col justify-center" style="max-width:520px;">
+  <section id="hero" class="hero-fin d-flex align-items-center" style="padding: 72px 0 72px 0; position:relative; min-height:600px;">
+    <!-- Background portrait image: show full image, not cropped, and make section taller -->
+    <div style="position:absolute;top:0;right:0;bottom:0;left:0;z-index:0;overflow:hidden;">
+      <img src="img/80b6ea67-f89f-4752-99b6-5e8eaa750f04.JPG"
+           alt="Katiuska Diaz Portrait Background"
+           style="position:absolute;right:0;top:50%;transform:translateY(-50%);height:100vh;width:auto;min-width:0;object-fit:contain;opacity:0.18;z-index:0;"/>
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(90deg,rgba(14,20,18,0.96) 48%,rgba(255,255,255,0) 100%);z-index:1;"></div>
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="80" style="position:relative;z-index:2;">
+      <div class="row align-items-center gy-4 flex-nowrap" style="margin-right:0;">
+        <div class="col-lg-7 flex flex-col justify-center" style="max-width:520px;">
           <div class="hero-kicker mb-1" style="margin-bottom:0.5rem;">Business • Finance • Automation</div>
           <h1 class="mt-2 mb-2" style="font-size:clamp(2.1rem,5vw,3rem);line-height:1.08;font-weight:800;letter-spacing:.01em;">
             Business & Finance Analyst | Automation Specialist
@@ -529,13 +536,7 @@
             <a href="https://medium.com/@nicolediaz18" target="_blank" aria-label="Medium"><i class="bi bi-journal-text"></i></a>
           </div>
         </div>
-        <!-- Portrait on the right side, not under text -->
-        <div class="col-lg-5 align-items-center" style="min-height:320px;">
-          <img src="assets/images/hero-finance-placeholder.jpg"
-               alt="Katiuska Diaz Portrait"
-               class="img-fluid rounded-xl shadow-xl hero-photo"
-               style="width:260px;max-width:100%;aspect-ratio:4/5;object-fit:cover;border:4px solid var(--accent);box-shadow:0 8px 32px rgba(0,0,0,.45);background:#1B3B2E;">
-        </div>
+        <!-- Portrait image column removed, now handled as background -->
       </div>
     </div>
   </section>
@@ -566,13 +567,12 @@
         <span>💼 Finance & Analytics Expertise</span>
       </div>
       <div class="flex justify-center gap-4 mt-2" style="opacity:.7;">
-    <img src="img/n8n logo .png" alt="n8n" style="height:28px;">
-    <img src="img/icons8-google-sheets-48.png" alt="Google Sheets" style="height:28px;">
-    <img src="img/icons8-python-48.png" alt="Python" style="height:28px;">
-    <img src="img/icons8-excel-48.png" alt="Excel" style="height:28px;">
-    <img src="img/icons8-gmail-48.png" alt="Gmail" style="height:28px;">
-   
-</div>
+        <img src="img/n8n logo .png" alt="n8n" style="height:28px;">
+        <img src="img/icons8-google-sheets-48.png" alt="Google Sheets" style="height:28px;">
+        <img src="img/icons8-python-48.png" alt="Python" style="height:28px;">
+        <img src="img/icons8-excel-48.png" alt="Excel" style="height:28px;">
+        <img src="img/icons8-gmail-48.png" alt="Gmail" style="height:28px;">
+      </div>
 
   </section>
 
@@ -846,7 +846,7 @@
   <!-- End Skills Section -->
 
   <!-- Writing Section -->
-  <section id="writing" class="writing-section" style="background:var(--beige); padding:56px 0; scroll-margin-top:72px;">
+  <section id="writing" class="writing-section" style="background:var(--beige); padding: 30px;px 0; scroll-margin-top:72px;">
   <div class="container" style="max-width:1000px; margin:0 auto; padding:0 20px;">
     <header class="writing-header" style="text-align:center; margin-bottom:24px;">
       <h2 style="font-size:2.3rem; font-weight:800; color:var(--accent); margin-bottom:0.5rem; border-bottom:1px solid var(--skills-line); padding-bottom:6px;">
@@ -1002,7 +1002,7 @@
             <style>
               #name::placeholder { color: #888; opacity: 1; }
             </style>
-            <div class="text-xs text-red-600 mt-1 hidden" id="name-error"></div>
+            <!-- <div class="text-xs text-red-600 mt-1 hidden" id="name-error"></div> -->
           </div>
           <div class="mb-4">
             <label for="email" class="block font-semibold mb-1" style="color:#1a202c; font-size:1.07rem;">Work Email <span style="color:var(--gold);">*</span></label>
@@ -1013,7 +1013,7 @@
             <style>
               #email::placeholder { color: #888; opacity: 1; }
             </style>
-            <div class="text-xs text-red-600 mt-1 hidden" id="email-error"></div>
+            <!-- <div class="text-xs text-red-600 mt-1 hidden" id="email-error"></div> -->
           </div>
           <div class="mb-4">
             <label for="topic" class="block font-semibold mb-1" style="color:#1a202c; font-size:1.07rem;">Topic <span style="color:var(--gold);">*</span></label>
@@ -1025,7 +1025,7 @@
               <option>Speaking / Media</option>
               <option>General Inquiry</option>
             </select>
-            <div class="text-xs text-red-600 mt-1 hidden" id="topic-error"></div>
+            <!-- <div class="text-xs text-red-600 mt-1 hidden" id="topic-error"></div> -->
           </div>
           <div class="mb-4">
             <label for="message" class="block font-semibold mb-1" style="color:#1a202c; font-size:1.07rem;">Message <span style="color:var(--gold);">*</span></label>
@@ -1037,7 +1037,7 @@
               #message::placeholder { color: #888; opacity: 1; }
             </style>
             <div class="text-xs text-gray-500 mt-1" id="message-count" style="color:var(--muted);">0 / 800</div>
-            <div class="text-xs text-red-600 mt-1 hidden" id="message-error"></div>
+            <!-- <div class="text-xs text-red-600 mt-1 hidden" id="message-error"></div> -->
           </div>
           <div class="mb-4">
             <label for="attachment" class="block font-semibold mb-1" style="color:#1a202c; font-size:1.07rem;">Attachment <span style="color:var(--muted); font-weight:400;">(PDF, max 5MB, optional)</span></label>
@@ -1117,10 +1117,10 @@
     const attachment = form.querySelector('#attachment');
     const submitBtn = form.querySelector('#submit-btn');
     const toast = form.querySelector('#form-toast');
-    const nameError = form.querySelector('#name-error');
-    const emailError = form.querySelector('#email-error');
-    const topicError = form.querySelector('#topic-error');
-    const messageError = form.querySelector('#message-error');
+    // const nameError = form.querySelector('#name-error');
+    // const emailError = form.querySelector('#email-error');
+    // const topicError = form.querySelector('#topic-error');
+    // const messageError = form.querySelector('#message-error');
     const attachmentError = form.querySelector('#attachment-error');
     const messageCount = form.querySelector('#message-count');
 
@@ -1136,35 +1136,35 @@
       let valid = true;
       // Name
       if (name.value.trim().length < 2) {
-        nameError.textContent = "Please enter your full name.";
-        nameError.classList.remove('hidden');
+        // nameError.textContent = "Please enter your full name.";
+        // nameError.classList.remove('hidden');
         valid = false;
       } else {
-        nameError.classList.add('hidden');
+        // nameError.classList.add('hidden');
       }
       // Email
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value.trim())) {
-        emailError.textContent = "Please enter a valid email address.";
-        emailError.classList.remove('hidden');
+        // emailError.textContent = "Please enter a valid email address.";
+        // emailError.classList.remove('hidden');
         valid = false;
       } else {
-        emailError.classList.add('hidden');
+        // emailError.classList.add('hidden');
       }
       // Topic
       if (!topic.value) {
-        topicError.textContent = "Please select a topic.";
-        topicError.classList.remove('hidden');
+        // topicError.textContent = "Please select a topic.";
+        // topicError.classList.remove('hidden');
         valid = false;
       } else {
-        topicError.classList.add('hidden');
+        // topicError.classList.add('hidden');
       }
       // Message
       if (message.value.trim().length < 20) {
-        messageError.textContent = "Message must be at least 20 characters.";
-        messageError.classList.remove('hidden');
+        // messageError.textContent = "Message must be at least 20 characters.";
+        // messageError.classList.remove('hidden');
         valid = false;
       } else {
-        messageError.classList.add('hidden');
+        // messageError.classList.add('hidden');
       }
       // Attachment
       if (attachment.files.length > 0) {
@@ -1267,6 +1267,13 @@
       document.querySelectorAll('.project-details-modal').forEach(function(modal) {
         modal.style.display = "none";
       });
+    }
+  });
+</script>
+</body>
+
+</html>
+</html>
     }
   });
 </script>
